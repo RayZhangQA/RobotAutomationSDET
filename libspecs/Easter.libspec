@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keywordspec format="ROBOT" generated="2020-06-05T19:51:57Z" lineno="1" name="Easter" namedargs="true" scope="GLOBAL" source="C:\Users\ADMINISTRATOR\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\libraries\Easter.py" specversion="2" type="LIBRARY">
+<version />
+<scope>global</scope>
+<namedargs>yes</namedargs>
+<doc>Documentation for library ``Easter``.</doc>
+<kw lineno="19" name="None Shall Pass">
+<arguments>
+<arg>who</arg>
+</arguments>
+<doc />
+</kw>
+</keywordspec>
