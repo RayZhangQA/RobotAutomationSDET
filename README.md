@@ -1,5 +1,12 @@
-1.
-# Introduction to Robot Framework
+Original Learning Notes for "Web Automation Using Robot Framework - Selenium with Python"
+
+The course is coming from YouTube SDET Channel which use Windows 10 + Pycharm IDE.
+
+My local environment was Windows 7 + Eclipse. So the notes include a lot of my own practices.
+
+This README.md file is converted from word document the format is messed up. I will try to modify it ASAP......
+
+# 1. Introduction to Robot Framework
 
 ## 1.1 Robot Framework
 
@@ -13,79 +20,64 @@
 
 - Check if Python is already installed in your system
 
-python --version
-
-pip --version
+		python --version	
+		pip --version
 
 - Download Python &amp; Install Python &amp; Add the path to System Variables
 - Install Selenium
 
-pip install selenium
-
-pip uninstall selenium
+		pip install selenium		
+		pip uninstall selenium
 
 - Install robot framework
 
-pip install robotframework
-
-pip install --upgrade robotframework
-
-pip install robotframework==2.9.2
-
-pip install –no-cache-dir robotframework
-
-pip uninstall robotframework
+		pip install robotframework		
+		pip install --upgrade robotframework		
+		pip install robotframework==2.9.2		
+		pip install –no-cache-dir robotframework		
+		pip uninstall robotframework
 
 - Install Robotframework Selenium Library
 
-pip install robotframework-seleniumlibrary
+		pip install robotframework-seleniumlibrary
+		pip uninstall robotframework-seleniumlibrary		
 
-pip uninstall robotframework-seleniumlibrary
-
-pip list
-
-pip show robotframework
-
-pip check robotframework
+		pip list		
+		pip show robotframework		
+		pip check robotframework
 
 ## 1.3 Eclipse IDE Setup
 
 - Download and Install Eclipse IDE
 - Install RED – Robot Editor from Eclipse Marketplace
 
-Eclipse\&gt;\&gt;Help\&gt;\&gt;Eclipse Marketplace\&gt;\&gt;Search for RED Robot Editor\&gt;\&gt;Install and Restart Eclipse
+###### Eclipse->Help->Eclipse Marketplace->Search for RED Robot Editor->Install and Restart Eclipse		
 
-RED requires python interpreter with robot framework installed in your system.
+RED requires python interpreter with robot framework installed in your system.		
 
-Eclipse\&gt;\&gt;Windows\&gt;\&gt;Preferences\&gt;\&gt;Robot Framework\&gt;\&gt;Installed frameworks
+###### Eclipse->Windows->Preferences->Robot Framework->Installed frameworks		
 
-You should see the python which automatically created.
-
+You should see the python which automatically created.		
 In case you have multiple version of Python you need select the correct one to use
 
 - Install CodeMix3 for Python Pack from Eclipse Marketplace
 - Copy the Chromedriver.exe to ../Python37/Scripts/ Folder.
 - Running the following code to resolve [WinError 31]
 
-ERROR: Could not install packages due to an EnvironmentError: [WinError 31] A device attached to the system is not funct
+		ERROR: Could not install packages due to an EnvironmentError: [WinError 31] A device attached to the system is not functioning
+		Consider using the `--user` option or check the permissions.
+		Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='utf-8'>
+		PermissionError: [WinError 31] A device attached to the system is not functioning
 
-ioning
+			chcp 1252
 
-Consider using the `--user` option or check the permissions.
 
-Exception ignored in: \&lt;\_io.TextIOWrapper name=&#39;\&lt;stdout\&gt;&#39; mode=&#39;w&#39; encoding=&#39;utf-8&#39;\&gt;
-
-PermissionError: [WinError 31] A device attached to the system is not functioning
-
-chcp 1252
-
-1.
 # First Test Case in Robot Framework
 
   1.
 ## Create New Robot Project
 
-Eclipse\&gt;\&gt;File\&gt;\&gt;New\&gt;\&gt;Robot Project: Follow the instruction
+Eclipse->File->New->Robot Project: Follow the instruction
 
   1.
 ## File Extensions, Writing Robot File, Reporting
@@ -100,11 +92,11 @@ Eclipse\&gt;\&gt;File\&gt;\&gt;New\&gt;\&gt;Robot Project: Follow the instructio
 - Writing Test Cases
 - Report
 
-1.
-# How to Handle Input Box in Robot Framework
 
-  1.
-## Working with Web Elements
+# 2. How to Handle Input Box in Robot Framework
+
+
+## 2.1 Working with Web Elements
 
 Import SeleniumLibrary to handle Web Elements
 
@@ -120,8 +112,8 @@ Click Button [locator]
 
 Click Image [locator]
 
-  1.
-## Text Box and Input Box
+
+## 2.2Text Box and Input Box
 
 - Visibility Status
 
@@ -280,7 +272,7 @@ ${loc} **Get Location**
 
 **Capture Element Screenshot** [locator, filename=selenium-element-screenshot-{index}.png]
 
-xpath = //div[@id=&#39;divLogo&#39;]/img ./screenshots/Logo.png
+xpath = //div[@id='divLogo']/img ./screenshots/Logo.png
 
 C:/Users/Administrator/eclipse-workspace/RobotAutomantionSDET/screenshots/Logo.png
 
@@ -300,14 +292,14 @@ C:/Users/Administrator/eclipse-workspace/RobotAutomantionSDET/screenshots/LoginT
 
 **Open Context Menu** [locator]
 
-xpath = //span[text()=&#39;right click me&#39;]
+xpath = //span[text()='right click me']
 
   1.
 ## Double Click
 
 **Double Click Element** [locator]
 
-xpath = //button[text()=&#39;Copy Text&#39;]
+xpath = //button[text()='Copy Text']
 
   1.
 ## Drag &amp; Drop
@@ -403,7 +395,7 @@ ${Title} **Get Title**
   1.
 ## Scrolling page till find element on page
 
-**Scroll Element Into View** xpath=//td[contains(text(),&#39;India&#39;)]
+**Scroll Element Into View** xpath=//td[contains(text(),'India')]
 
   1.
 ## Scrolling page to end of the page – Scrolling down to Bottom
@@ -512,27 +504,27 @@ ${linkText} **Get Text** xpath=(//a)[${i}]
 
 **Maximize Browser Window**
 
-${rows} **Get Element Count** //table[@name=&#39;BookTable&#39;]/tbody/tr
+${rows} **Get Element Count** //table[@name='BookTable']/tbody/tr
 
-${cols} **Get Element Count** //table[@name=&#39;BookTable&#39;]/tbody/tr[1]/th
+${cols} **Get Element Count** //table[@name='BookTable']/tbody/tr[1]/th
 
 **Log** The Table has ${rows} rows.
 
 **Log** The Table has ${cols} columns.
 
-${cellData} **Get Text** //table[@name=&#39;BookTable&#39;]/tbody/tr[5]/td[1]
+${cellData} **Get Text** //table[@name='BookTable']/tbody/tr[5]/td[1]
 
 **Log** The text of 5th row and 1st column is &quot;${cellData}&quot;
 
-**Table Should Contain** //table[@name=&#39;BookTable&#39;] JAVA
+**Table Should Contain** //table[@name='BookTable'] JAVA
 
-**Table Header Should Contain** //table[@name=&#39;BookTable&#39;] BookName
+**Table Header Should Contain** //table[@name='BookTable'] BookName
 
-**Table Column Should Contain** //table[@name=&#39;BookTable&#39;] 2 Author
+**Table Column Should Contain** //table[@name='BookTable'] 2 Author
 
-**Table Row Should Contain** //table[@name=&#39;BookTable&#39;] 6 Master In Java
+**Table Row Should Contain** //table[@name='BookTable'] 6 Master In Java
 
-**Table Cell Should Contain** //table[@name=&#39;BookTable&#39;] 2 3 Selenium
+**Table Cell Should Contain** //table[@name='BookTable'] 2 3 Selenium
 
 **Close Browser**
 
@@ -818,7 +810,7 @@ ${txt\_loginUserName} name=userName
 
 ${txt\_loginPassWord} name=password
 
-${btn\_signIn} xpath=//input[@name=&#39;login&#39;]
+${btn\_signIn} xpath=//input[@name='login']
 
 #Registration Page Elements
 
@@ -850,7 +842,7 @@ ${txt\_passWord} name=password
 
 ${txt\_confPwd} name=confirmPassword
 
-${btn\_submit} xpath=//input[@name=&#39;register&#39;]
+${btn\_submit} xpath=//input[@name='register']
 
 1. Create Resources Folder to store all the Keywords
 
@@ -977,7 +969,7 @@ pabot --processes 2 TestCases\*.robot
 
 - Run Test Parallelly
 
-From Eclipse \&gt;\&gt;right click &quot;run.bat&quot; file\&gt;\&gt;
+From Eclipse ->right click &quot;run.bat&quot; file->
 
 **Note: Eclipse does not working with batch file**
 
