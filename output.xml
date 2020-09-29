@@ -1,100 +1,1008 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.7.2 on win32)" generated="20200514 14:11:25.540" rpa="false">
-<suite id="s1" name="TaggingTest" source="C:\Users\Administrator\eclipse-workspace\RobotAutomantionSDET\test\TaggingTest.robot">
-<test id="s1-t1" name="TC1 User Registration Test">
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
+<robot generator="Robot 3.2.2 (Python 3.7.2 on win32)" generated="20200929 18:28:31.757" rpa="false">
+<suite id="s1" name="RobotAutomationSDET" source="D:\eclipse-workspace\RobotAutomationSDET">
+<suite id="s1-s1" name="TestCases" source="D:\eclipse-workspace\RobotAutomationSDET\TestCases">
+<suite id="s1-s1-s1" name="AdvancedWebElements" source="D:\eclipse-workspace\RobotAutomationSDET\TestCases\AdvancedWebElements.robot">
+<test id="s1-s1-s1-t1" name="NavigationalKeywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
-<arg>This is user Registration Test</arg>
+<arg>https://www.google.com/</arg>
+<arg>Chrome</arg>
 </arguments>
-<status status="PASS" starttime="20200514 14:11:25.692" endtime="20200514 14:11:25.697"></status>
+<msg timestamp="20200929 18:28:31.988" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com/'.</msg>
+<status status="PASS" starttime="20200929 18:28:31.988" endtime="20200929 18:28:35.888"></status>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser window URL.</doc>
+<assign>
+<var>${Location}</var>
+</assign>
+<msg timestamp="20200929 18:28:35.891" level="INFO">${Location} = https://www.google.com/</msg>
+<status status="PASS" starttime="20200929 18:28:35.888" endtime="20200929 18:28:35.892"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
 <arguments>
-<arg>User Registration Test is over</arg>
+<arg>The 1st Open Browser is ${Location}</arg>
 </arguments>
-<status status="PASS" starttime="20200514 14:11:25.703" endtime="20200514 14:11:25.707"></status>
+<msg timestamp="20200929 18:28:35.892" level="INFO">The 1st Open Browser is https://www.google.com/</msg>
+<status status="PASS" starttime="20200929 18:28:35.892" endtime="20200929 18:28:35.892"></status>
 </kw>
-<tags>
-<tag>sanity</tag>
-</tags>
-<status status="PASS" starttime="20200514 14:11:25.686" endtime="20200514 14:11:25.718" critical="yes"></status>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200929 18:28:38.899" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200929 18:28:35.892" endtime="20200929 18:28:38.899"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>https://www.bing.com/</arg>
+</arguments>
+<msg timestamp="20200929 18:28:38.900" level="INFO">Opening url 'https://www.bing.com/'</msg>
+<status status="PASS" starttime="20200929 18:28:38.899" endtime="20200929 18:28:39.085"></status>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser window URL.</doc>
+<assign>
+<var>${Location}</var>
+</assign>
+<msg timestamp="20200929 18:28:39.136" level="INFO">${Location} = https://www.bing.com/</msg>
+<status status="PASS" starttime="20200929 18:28:39.085" endtime="20200929 18:28:39.136"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Go To the 2nd Browser: ${Location}</arg>
+</arguments>
+<msg timestamp="20200929 18:28:39.136" level="INFO">Go To the 2nd Browser: https://www.bing.com/</msg>
+<status status="PASS" starttime="20200929 18:28:39.136" endtime="20200929 18:28:39.136"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200929 18:28:42.139" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200929 18:28:39.137" endtime="20200929 18:28:42.139"></status>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20200929 18:28:42.139" endtime="20200929 18:28:42.349"></status>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser window URL.</doc>
+<assign>
+<var>${Location}</var>
+</assign>
+<msg timestamp="20200929 18:28:42.353" level="INFO">${Location} = https://www.google.com/</msg>
+<status status="PASS" starttime="20200929 18:28:42.350" endtime="20200929 18:28:42.353"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Go Back to 1st Browser: ${Location}</arg>
+</arguments>
+<msg timestamp="20200929 18:28:42.353" level="INFO">Go Back to 1st Browser: https://www.google.com/</msg>
+<status status="PASS" starttime="20200929 18:28:42.353" endtime="20200929 18:28:42.353"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200929 18:28:45.363" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200929 18:28:42.354" endtime="20200929 18:28:45.363"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200929 18:28:45.363" endtime="20200929 18:28:47.490"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:28:31.987" endtime="20200929 18:28:47.490" critical="yes"></status>
 </test>
-<test id="s1-t2" name="TC2 User Login Test">
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
+<test id="s1-s1-s1-t2" name="CaptureElementScreenshot">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
-<arg>This is user Login Test</arg>
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<arg>Chrome</arg>
 </arguments>
-<status status="PASS" starttime="20200514 14:11:25.737" endtime="20200514 14:11:25.741"></status>
+<msg timestamp="20200929 18:28:47.492" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20200929 18:28:47.491" endtime="20200929 18:28:51.562"></status>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
 <arguments>
-<arg>User Login Test is over</arg>
+<arg>id = txtUsername</arg>
+<arg>Admin</arg>
 </arguments>
-<status status="PASS" starttime="20200514 14:11:25.751" endtime="20200514 14:11:25.754"></status>
+<msg timestamp="20200929 18:28:51.563" level="INFO">Typing text 'Admin' into text field 'id = txtUsername'.</msg>
+<status status="PASS" starttime="20200929 18:28:51.563" endtime="20200929 18:28:51.618"></status>
 </kw>
-<tags>
-<tag>sanity</tag>
-</tags>
-<status status="PASS" starttime="20200514 14:11:25.731" endtime="20200514 14:11:25.761" critical="yes"></status>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id = txtPassword</arg>
+<arg>admin123</arg>
+</arguments>
+<msg timestamp="20200929 18:28:51.619" level="INFO">Typing text 'admin123' into text field 'id = txtPassword'.</msg>
+<status status="PASS" starttime="20200929 18:28:51.619" endtime="20200929 18:28:51.672"></status>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<arguments>
+<arg>xpath = //div[@id='divLogo']/img</arg>
+<arg>./Screenshots/Logo.png</arg>
+</arguments>
+<msg timestamp="20200929 18:28:52.004" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/Logo.png"&gt;&lt;img src="Screenshots/Logo.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200929 18:28:51.672" endtime="20200929 18:28:52.005"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<arguments>
+<arg>./Screenshots/LoginTC.png</arg>
+</arguments>
+<msg timestamp="20200929 18:28:52.284" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/LoginTC.png"&gt;&lt;img src="Screenshots/LoginTC.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200929 18:28:52.005" endtime="20200929 18:28:52.284"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:28:47.491" endtime="20200929 18:28:52.284" critical="yes"></status>
 </test>
-<test id="s1-t3" name="TC3 Change User Setting">
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
+<test id="s1-s1-s1-t3" name="MouseActions">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
-<arg>This is Change User Setting Test</arg>
+<arg>http://swisnl.github.io/jQuery-contextMenu/demo.html</arg>
+<arg>Chrome</arg>
 </arguments>
-<status status="PASS" starttime="20200514 14:11:25.776" endtime="20200514 14:11:25.780"></status>
+<msg timestamp="20200929 18:28:52.286" level="INFO">Opening browser 'Chrome' to base url 'http://swisnl.github.io/jQuery-contextMenu/demo.html'.</msg>
+<status status="PASS" starttime="20200929 18:28:52.285" endtime="20200929 18:28:56.139"></status>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200929 18:28:56.139" endtime="20200929 18:28:58.299"></status>
+</kw>
+<kw name="Open Context Menu" library="SeleniumLibrary">
+<doc>Opens the context menu on the element identified by ``locator``.</doc>
 <arguments>
-<arg>Change User Setting Test is over</arg>
+<arg>xpath = //span[text()='right click me']</arg>
 </arguments>
-<status status="PASS" starttime="20200514 14:11:25.786" endtime="20200514 14:11:25.790"></status>
+<status status="PASS" starttime="20200929 18:28:58.299" endtime="20200929 18:28:58.597"></status>
 </kw>
-<tags>
-<tag>regression</tag>
-<tag>sanity</tag>
-</tags>
-<status status="PASS" starttime="20200514 14:11:25.772" endtime="20200514 14:11:25.793" critical="yes"></status>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200929 18:29:01.603" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200929 18:28:58.597" endtime="20200929 18:29:01.603"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>https://testautomationpractice.blogspot.com/</arg>
+</arguments>
+<msg timestamp="20200929 18:29:01.604" level="INFO">Opening url 'https://testautomationpractice.blogspot.com/'</msg>
+<status status="PASS" starttime="20200929 18:29:01.603" endtime="20200929 18:29:02.784"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200929 18:29:02.784" endtime="20200929 18:29:02.787"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20200929 18:29:04.802" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20200929 18:29:02.787" endtime="20200929 18:29:04.802"></status>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<doc>Double clicks the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath = //button[text()='Copy Text']</arg>
+</arguments>
+<msg timestamp="20200929 18:29:04.803" level="INFO">Double clicking element 'xpath = //button[text()='Copy Text']'.</msg>
+<status status="PASS" starttime="20200929 18:29:04.802" endtime="20200929 18:29:05.079"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200929 18:29:08.094" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200929 18:29:05.079" endtime="20200929 18:29:08.094"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html</arg>
+</arguments>
+<msg timestamp="20200929 18:29:08.095" level="INFO">Opening url 'http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html'</msg>
+<status status="PASS" starttime="20200929 18:29:08.094" endtime="20200929 18:29:08.585"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200929 18:29:08.585" endtime="20200929 18:29:08.587"></status>
+</kw>
+<kw name="Drag And Drop" library="SeleniumLibrary">
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<arguments>
+<arg>id = box6</arg>
+<arg>id = box106</arg>
+</arguments>
+<status status="PASS" starttime="20200929 18:29:08.587" endtime="20200929 18:29:09.153"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200929 18:29:12.154" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200929 18:29:09.153" endtime="20200929 18:29:12.154"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200929 18:29:12.154" endtime="20200929 18:29:16.426"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:28:52.285" endtime="20200929 18:29:16.426" critical="yes"></status>
 </test>
-<test id="s1-t4" name="TC4 User Logout Test">
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
+<test id="s1-s1-s1-t4" name="UserKeywordsWithArgumentsAndReturn">
+<kw name="LaunchBrowser">
 <arguments>
-<arg>This is user Logout Test</arg>
+<arg>${urlNewtours}</arg>
+<arg>${Browser}</arg>
 </arguments>
-<status status="PASS" starttime="20200514 14:11:25.812" endtime="20200514 14:11:25.816"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
+<assign>
+<var>${pageTitle}</var>
+</assign>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
-<arg>User Logout Test is over</arg>
+<arg>${appUrl}</arg>
+<arg>${appBrowser}</arg>
 </arguments>
-<status status="PASS" starttime="20200514 14:11:25.821" endtime="20200514 14:11:25.824"></status>
+<msg timestamp="20200929 18:29:16.429" level="INFO">Opening browser 'Chrome' to base url 'http://www.newtours.demoaut.com/'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200929 18:29:53.510" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200929 18:29:53.232" endtime="20200929 18:29:53.511"></status>
 </kw>
-<tags>
-<tag>regression</tag>
-</tags>
-<status status="PASS" starttime="20200514 14:11:25.808" endtime="20200514 14:11:25.832" critical="yes"></status>
+<msg timestamp="20200929 18:29:53.532" level="FAIL">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=85.0.4183.121)
+</msg>
+<status status="FAIL" starttime="20200929 18:29:16.428" endtime="20200929 18:29:53.532"></status>
+</kw>
+<status status="FAIL" starttime="20200929 18:29:16.427" endtime="20200929 18:29:53.532"></status>
+</kw>
+<status status="FAIL" starttime="20200929 18:29:16.427" endtime="20200929 18:29:53.532" critical="yes">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=85.0.4183.121)
+</status>
 </test>
-<status status="PASS" starttime="20200514 14:11:25.550" endtime="20200514 14:11:25.841"></status>
+<test id="s1-s1-s1-t5" name="ScrollingPageTest">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://www.countries-ofthe-world.com/flags-of-the-world.html</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20200929 18:29:53.534" level="INFO">Opening browser 'Chrome' to base url 'https://www.countries-ofthe-world.com/flags-of-the-world.html'.</msg>
+<status status="PASS" starttime="20200929 18:29:53.533" endtime="20200929 18:29:57.473"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,2500)</arg>
+</arguments>
+<msg timestamp="20200929 18:29:57.474" level="INFO">Executing JavaScript:
+window.scrollTo(0,2500)
+Without any arguments.</msg>
+<status status="PASS" starttime="20200929 18:29:57.473" endtime="20200929 18:29:57.480"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200929 18:30:00.488" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200929 18:29:57.480" endtime="20200929 18:30:00.488"></status>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>xpath=//td[contains(text(),'India')]</arg>
+</arguments>
+<status status="PASS" starttime="20200929 18:30:00.488" endtime="20200929 18:30:00.778"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200929 18:30:03.781" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200929 18:30:00.778" endtime="20200929 18:30:03.781"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
+</arguments>
+<msg timestamp="20200929 18:30:03.782" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20200929 18:30:03.781" endtime="20200929 18:30:03.790"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.803" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200929 18:30:03.790" endtime="20200929 18:30:06.803"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0,-document.body.scrollHeight)</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.805" level="INFO">Executing JavaScript:
+window.scrollTo(0,-document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" starttime="20200929 18:30:06.803" endtime="20200929 18:30:06.810"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:29:53.533" endtime="20200929 18:30:06.810" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t6" name="ForLoopDemo1">
+<kw name="${i} IN RANGE [ 1 | 10 ]" type="for">
+<kw name="${i} = 1" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo1 - Print 1 to 9 in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.812" level="INFO">For Loop Demo1 - Print 1 to 9 in console - 1</msg>
+<status status="PASS" starttime="20200929 18:30:06.812" endtime="20200929 18:30:06.812"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.811" endtime="20200929 18:30:06.812"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo1 - Print 1 to 9 in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.813" level="INFO">For Loop Demo1 - Print 1 to 9 in console - 2</msg>
+<status status="PASS" starttime="20200929 18:30:06.812" endtime="20200929 18:30:06.813"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.812" endtime="20200929 18:30:06.813"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo1 - Print 1 to 9 in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.813" level="INFO">For Loop Demo1 - Print 1 to 9 in console - 3</msg>
+<status status="PASS" starttime="20200929 18:30:06.813" endtime="20200929 18:30:06.813"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.813" endtime="20200929 18:30:06.814"></status>
+</kw>
+<kw name="${i} = 4" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo1 - Print 1 to 9 in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.814" level="INFO">For Loop Demo1 - Print 1 to 9 in console - 4</msg>
+<status status="PASS" starttime="20200929 18:30:06.814" endtime="20200929 18:30:06.814"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.814" endtime="20200929 18:30:06.814"></status>
+</kw>
+<kw name="${i} = 5" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo1 - Print 1 to 9 in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.815" level="INFO">For Loop Demo1 - Print 1 to 9 in console - 5</msg>
+<status status="PASS" starttime="20200929 18:30:06.814" endtime="20200929 18:30:06.815"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.814" endtime="20200929 18:30:06.815"></status>
+</kw>
+<kw name="${i} = 6" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo1 - Print 1 to 9 in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.815" level="INFO">For Loop Demo1 - Print 1 to 9 in console - 6</msg>
+<status status="PASS" starttime="20200929 18:30:06.815" endtime="20200929 18:30:06.816"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.815" endtime="20200929 18:30:06.816"></status>
+</kw>
+<kw name="${i} = 7" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo1 - Print 1 to 9 in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.817" level="INFO">For Loop Demo1 - Print 1 to 9 in console - 7</msg>
+<status status="PASS" starttime="20200929 18:30:06.816" endtime="20200929 18:30:06.817"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.816" endtime="20200929 18:30:06.817"></status>
+</kw>
+<kw name="${i} = 8" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo1 - Print 1 to 9 in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.817" level="INFO">For Loop Demo1 - Print 1 to 9 in console - 8</msg>
+<status status="PASS" starttime="20200929 18:30:06.817" endtime="20200929 18:30:06.817"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.817" endtime="20200929 18:30:06.818"></status>
+</kw>
+<kw name="${i} = 9" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo1 - Print 1 to 9 in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.818" level="INFO">For Loop Demo1 - Print 1 to 9 in console - 9</msg>
+<status status="PASS" starttime="20200929 18:30:06.818" endtime="20200929 18:30:06.818"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.818" endtime="20200929 18:30:06.818"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.811" endtime="20200929 18:30:06.818"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.811" endtime="20200929 18:30:06.819" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t7" name="ForLoopDemo2">
+<kw name="${i} IN [ 1 | 2 | 3 | 4 | 5 | 4 | 6 | 8 | 9 ]" type="for">
+<kw name="${i} = 1" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo2 - Print the numberList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.820" level="INFO">For Loop Demo2 - Print the numberList in console - 1</msg>
+<status status="PASS" starttime="20200929 18:30:06.820" endtime="20200929 18:30:06.820"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.819" endtime="20200929 18:30:06.820"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo2 - Print the numberList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.820" level="INFO">For Loop Demo2 - Print the numberList in console - 2</msg>
+<status status="PASS" starttime="20200929 18:30:06.820" endtime="20200929 18:30:06.821"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.820" endtime="20200929 18:30:06.821"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo2 - Print the numberList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.821" level="INFO">For Loop Demo2 - Print the numberList in console - 3</msg>
+<status status="PASS" starttime="20200929 18:30:06.821" endtime="20200929 18:30:06.821"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.821" endtime="20200929 18:30:06.821"></status>
+</kw>
+<kw name="${i} = 4" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo2 - Print the numberList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.822" level="INFO">For Loop Demo2 - Print the numberList in console - 4</msg>
+<status status="PASS" starttime="20200929 18:30:06.822" endtime="20200929 18:30:06.822"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.821" endtime="20200929 18:30:06.822"></status>
+</kw>
+<kw name="${i} = 5" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo2 - Print the numberList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.822" level="INFO">For Loop Demo2 - Print the numberList in console - 5</msg>
+<status status="PASS" starttime="20200929 18:30:06.822" endtime="20200929 18:30:06.822"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.822" endtime="20200929 18:30:06.823"></status>
+</kw>
+<kw name="${i} = 4" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo2 - Print the numberList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.823" level="INFO">For Loop Demo2 - Print the numberList in console - 4</msg>
+<status status="PASS" starttime="20200929 18:30:06.823" endtime="20200929 18:30:06.823"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.823" endtime="20200929 18:30:06.823"></status>
+</kw>
+<kw name="${i} = 6" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo2 - Print the numberList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.824" level="INFO">For Loop Demo2 - Print the numberList in console - 6</msg>
+<status status="PASS" starttime="20200929 18:30:06.823" endtime="20200929 18:30:06.824"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.823" endtime="20200929 18:30:06.824"></status>
+</kw>
+<kw name="${i} = 8" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo2 - Print the numberList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.824" level="INFO">For Loop Demo2 - Print the numberList in console - 8</msg>
+<status status="PASS" starttime="20200929 18:30:06.824" endtime="20200929 18:30:06.824"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.824" endtime="20200929 18:30:06.824"></status>
+</kw>
+<kw name="${i} = 9" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo2 - Print the numberList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.825" level="INFO">For Loop Demo2 - Print the numberList in console - 9</msg>
+<status status="PASS" starttime="20200929 18:30:06.825" endtime="20200929 18:30:06.825"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.825" endtime="20200929 18:30:06.825"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.819" endtime="20200929 18:30:06.825"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.819" endtime="20200929 18:30:06.825" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t8" name="ForLoopDemo3">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>1</arg>
+<arg>2</arg>
+<arg>3</arg>
+<arg>4</arg>
+<arg>7</arg>
+<arg>9</arg>
+</arguments>
+<assign>
+<var>@{items}</var>
+</assign>
+<msg timestamp="20200929 18:30:06.826" level="INFO">@{items} = [ 1 | 2 | 3 | 4 | 7 | 9 ]</msg>
+<status status="PASS" starttime="20200929 18:30:06.826" endtime="20200929 18:30:06.826"></status>
+</kw>
+<kw name="${i} IN [ @{items} ]" type="for">
+<kw name="${i} = 1" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo3 - Print the itemsList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.827" level="INFO">For Loop Demo3 - Print the itemsList in console - 1</msg>
+<status status="PASS" starttime="20200929 18:30:06.827" endtime="20200929 18:30:06.827"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.827" endtime="20200929 18:30:06.827"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo3 - Print the itemsList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.828" level="INFO">For Loop Demo3 - Print the itemsList in console - 2</msg>
+<status status="PASS" starttime="20200929 18:30:06.827" endtime="20200929 18:30:06.828"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.827" endtime="20200929 18:30:06.828"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo3 - Print the itemsList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.828" level="INFO">For Loop Demo3 - Print the itemsList in console - 3</msg>
+<status status="PASS" starttime="20200929 18:30:06.828" endtime="20200929 18:30:06.828"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.828" endtime="20200929 18:30:06.828"></status>
+</kw>
+<kw name="${i} = 4" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo3 - Print the itemsList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.829" level="INFO">For Loop Demo3 - Print the itemsList in console - 4</msg>
+<status status="PASS" starttime="20200929 18:30:06.829" endtime="20200929 18:30:06.829"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.829" endtime="20200929 18:30:06.829"></status>
+</kw>
+<kw name="${i} = 7" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo3 - Print the itemsList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.829" level="INFO">For Loop Demo3 - Print the itemsList in console - 7</msg>
+<status status="PASS" starttime="20200929 18:30:06.829" endtime="20200929 18:30:06.830"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.829" endtime="20200929 18:30:06.830"></status>
+</kw>
+<kw name="${i} = 9" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo3 - Print the itemsList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.830" level="INFO">For Loop Demo3 - Print the itemsList in console - 9</msg>
+<status status="PASS" starttime="20200929 18:30:06.830" endtime="20200929 18:30:06.830"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.830" endtime="20200929 18:30:06.830"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.826" endtime="20200929 18:30:06.830"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.826" endtime="20200929 18:30:06.831" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t9" name="ForLoopDemo4">
+<kw name="${i} IN [ john | david | smith | scott ]" type="for">
+<kw name="${i} = john" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo4 - Print the stringList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.832" level="INFO">For Loop Demo4 - Print the stringList in console - john</msg>
+<status status="PASS" starttime="20200929 18:30:06.831" endtime="20200929 18:30:06.832"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.831" endtime="20200929 18:30:06.832"></status>
+</kw>
+<kw name="${i} = david" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo4 - Print the stringList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.832" level="INFO">For Loop Demo4 - Print the stringList in console - david</msg>
+<status status="PASS" starttime="20200929 18:30:06.832" endtime="20200929 18:30:06.832"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.832" endtime="20200929 18:30:06.833"></status>
+</kw>
+<kw name="${i} = smith" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo4 - Print the stringList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.833" level="INFO">For Loop Demo4 - Print the stringList in console - smith</msg>
+<status status="PASS" starttime="20200929 18:30:06.833" endtime="20200929 18:30:06.833"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.833" endtime="20200929 18:30:06.833"></status>
+</kw>
+<kw name="${i} = scott" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo4 - Print the stringList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.834" level="INFO">For Loop Demo4 - Print the stringList in console - scott</msg>
+<status status="PASS" starttime="20200929 18:30:06.833" endtime="20200929 18:30:06.834"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.833" endtime="20200929 18:30:06.834"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.831" endtime="20200929 18:30:06.834"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.831" endtime="20200929 18:30:06.834" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t10" name="ForLoopDemo5">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>john</arg>
+<arg>david</arg>
+<arg>smith</arg>
+<arg>scott</arg>
+</arguments>
+<assign>
+<var>@{namesList}</var>
+</assign>
+<msg timestamp="20200929 18:30:06.835" level="INFO">@{namesList} = [ john | david | smith | scott ]</msg>
+<status status="PASS" starttime="20200929 18:30:06.835" endtime="20200929 18:30:06.835"></status>
+</kw>
+<kw name="${i} IN [ @{namesList} ]" type="for">
+<kw name="${i} = john" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo5 - Print the variableList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.836" level="INFO">For Loop Demo5 - Print the variableList in console - john</msg>
+<status status="PASS" starttime="20200929 18:30:06.835" endtime="20200929 18:30:06.836"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.835" endtime="20200929 18:30:06.836"></status>
+</kw>
+<kw name="${i} = david" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo5 - Print the variableList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.836" level="INFO">For Loop Demo5 - Print the variableList in console - david</msg>
+<status status="PASS" starttime="20200929 18:30:06.836" endtime="20200929 18:30:06.836"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.836" endtime="20200929 18:30:06.836"></status>
+</kw>
+<kw name="${i} = smith" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo5 - Print the variableList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.837" level="INFO">For Loop Demo5 - Print the variableList in console - smith</msg>
+<status status="PASS" starttime="20200929 18:30:06.837" endtime="20200929 18:30:06.837"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.837" endtime="20200929 18:30:06.837"></status>
+</kw>
+<kw name="${i} = scott" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo5 - Print the variableList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.837" level="INFO">For Loop Demo5 - Print the variableList in console - scott</msg>
+<status status="PASS" starttime="20200929 18:30:06.837" endtime="20200929 18:30:06.838"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.837" endtime="20200929 18:30:06.838"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.835" endtime="20200929 18:30:06.838"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.834" endtime="20200929 18:30:06.838" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t11" name="ForLoopDemo6">
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>1</arg>
+<arg>2</arg>
+<arg>3</arg>
+<arg>4</arg>
+<arg>5</arg>
+</arguments>
+<assign>
+<var>@{items}</var>
+</assign>
+<msg timestamp="20200929 18:30:06.839" level="INFO">@{items} = [ 1 | 2 | 3 | 4 | 5 ]</msg>
+<status status="PASS" starttime="20200929 18:30:06.839" endtime="20200929 18:30:06.839"></status>
+</kw>
+<kw name="${i} IN [ @{items} ]" type="for">
+<kw name="${i} = 1" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo6 - Print the itemList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.840" level="INFO">For Loop Demo6 - Print the itemList in console - 1</msg>
+<status status="PASS" starttime="20200929 18:30:06.839" endtime="20200929 18:30:06.840"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==3</arg>
+</arguments>
+<status status="PASS" starttime="20200929 18:30:06.840" endtime="20200929 18:30:06.840"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.839" endtime="20200929 18:30:06.840"></status>
+</kw>
+<kw name="${i} = 2" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo6 - Print the itemList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.841" level="INFO">For Loop Demo6 - Print the itemList in console - 2</msg>
+<status status="PASS" starttime="20200929 18:30:06.840" endtime="20200929 18:30:06.841"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==3</arg>
+</arguments>
+<status status="PASS" starttime="20200929 18:30:06.841" endtime="20200929 18:30:06.841"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.840" endtime="20200929 18:30:06.841"></status>
+</kw>
+<kw name="${i} = 3" type="foritem">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>For Loop Demo6 - Print the itemList in console - ${i}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.842" level="INFO">For Loop Demo6 - Print the itemList in console - 3</msg>
+<status status="PASS" starttime="20200929 18:30:06.841" endtime="20200929 18:30:06.842"></status>
+</kw>
+<kw name="Exit For Loop If" library="BuiltIn">
+<doc>Stops executing the enclosing for loop if the ``condition`` is true.</doc>
+<arguments>
+<arg>${i}==3</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.842" level="INFO">Exiting for loop altogether.</msg>
+<status status="PASS" starttime="20200929 18:30:06.842" endtime="20200929 18:30:06.842"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.841" endtime="20200929 18:30:06.842"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.839" endtime="20200929 18:30:06.842"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:06.838" endtime="20200929 18:30:06.843" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t12" name="GetAllLinksTest">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${urlNewtours}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20200929 18:30:06.844" level="INFO">Opening browser 'Chrome' to base url 'http://www.newtours.demoaut.com/'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200929 18:30:43.833" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200929 18:30:43.542" endtime="20200929 18:30:43.833"></status>
+</kw>
+<msg timestamp="20200929 18:30:43.834" level="FAIL">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=85.0.4183.121)
+</msg>
+<status status="FAIL" starttime="20200929 18:30:06.843" endtime="20200929 18:30:43.834"></status>
+</kw>
+<status status="FAIL" starttime="20200929 18:30:06.843" endtime="20200929 18:30:43.835" critical="yes">WebDriverException: Message: unknown error: net::ERR_NAME_NOT_RESOLVED
+  (Session info: chrome=85.0.4183.121)
+</status>
+</test>
+<test id="s1-s1-s1-t13" name="TableValidationTest">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://testautomationpractice.blogspot.com/</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20200929 18:30:43.836" level="INFO">Opening browser 'Chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<status status="PASS" starttime="20200929 18:30:43.836" endtime="20200929 18:30:49.364"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200929 18:30:49.365" endtime="20200929 18:30:51.517"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//table[@name='BookTable']/tbody/tr</arg>
+</arguments>
+<assign>
+<var>${rows}</var>
+</assign>
+<msg timestamp="20200929 18:30:51.530" level="INFO">${rows} = 7</msg>
+<status status="PASS" starttime="20200929 18:30:51.518" endtime="20200929 18:30:51.530"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>//table[@name='BookTable']/tbody/tr[1]/th</arg>
+</arguments>
+<assign>
+<var>${cols}</var>
+</assign>
+<msg timestamp="20200929 18:30:51.541" level="INFO">${cols} = 4</msg>
+<status status="PASS" starttime="20200929 18:30:51.530" endtime="20200929 18:30:51.541"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>The Table has ${rows} rows.</arg>
+</arguments>
+<msg timestamp="20200929 18:30:51.542" level="INFO">The Table has 7 rows.</msg>
+<status status="PASS" starttime="20200929 18:30:51.541" endtime="20200929 18:30:51.542"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>The Table has ${cols} columns.</arg>
+</arguments>
+<msg timestamp="20200929 18:30:51.543" level="INFO">The Table has 4 columns.</msg>
+<status status="PASS" starttime="20200929 18:30:51.542" endtime="20200929 18:30:51.543"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>//table[@name='BookTable']/tbody/tr[5]/td[1]</arg>
+</arguments>
+<assign>
+<var>${cellData}</var>
+</assign>
+<msg timestamp="20200929 18:30:51.559" level="INFO">${cellData} = Master In Selenium</msg>
+<status status="PASS" starttime="20200929 18:30:51.543" endtime="20200929 18:30:51.559"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>The text of 5th row and 1st column is "${cellData}".</arg>
+</arguments>
+<msg timestamp="20200929 18:30:51.560" level="INFO">The text of 5th row and 1st column is "Master In Selenium".</msg>
+<status status="PASS" starttime="20200929 18:30:51.559" endtime="20200929 18:30:51.560"></status>
+</kw>
+<kw name="Table Should Contain" library="SeleniumLibrary">
+<doc>Verifies table contains text ``expected``.</doc>
+<arguments>
+<arg>//table[@name='BookTable']</arg>
+<arg>JAVA</arg>
+</arguments>
+<status status="PASS" starttime="20200929 18:30:51.560" endtime="20200929 18:30:51.614"></status>
+</kw>
+<kw name="Table Header Should Contain" library="SeleniumLibrary">
+<doc>Verifies table header contains text ``expected``.</doc>
+<arguments>
+<arg>//table[@name='BookTable']</arg>
+<arg>BookName</arg>
+</arguments>
+<status status="PASS" starttime="20200929 18:30:51.614" endtime="20200929 18:30:51.641"></status>
+</kw>
+<kw name="Table Column Should Contain" library="SeleniumLibrary">
+<doc>Verifies table column contains text ``expected``.</doc>
+<arguments>
+<arg>//table[@name='BookTable']</arg>
+<arg>2</arg>
+<arg>Author</arg>
+</arguments>
+<status status="PASS" starttime="20200929 18:30:51.641" endtime="20200929 18:30:51.664"></status>
+</kw>
+<kw name="Table Row Should Contain" library="SeleniumLibrary">
+<doc>Verifies that table row contains text ``expected``.</doc>
+<arguments>
+<arg>//table[@name='BookTable']</arg>
+<arg>6</arg>
+<arg>Master In Java</arg>
+</arguments>
+<status status="PASS" starttime="20200929 18:30:51.664" endtime="20200929 18:30:51.689"></status>
+</kw>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<doc>Verifies table cell contains text ``expected``.</doc>
+<arguments>
+<arg>//table[@name='BookTable']</arg>
+<arg>2</arg>
+<arg>3</arg>
+<arg>Selenium</arg>
+</arguments>
+<msg timestamp="20200929 18:30:51.723" level="INFO">Table cell contains 'Selenium'.</msg>
+<status status="PASS" starttime="20200929 18:30:51.689" endtime="20200929 18:30:51.724"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200929 18:30:51.724" endtime="20200929 18:30:53.850"></status>
+</kw>
+<status status="PASS" starttime="20200929 18:30:43.835" endtime="20200929 18:30:53.850" critical="yes"></status>
+</test>
+<status status="FAIL" starttime="20200929 18:28:31.870" endtime="20200929 18:30:53.851"></status>
+</suite>
+<status status="FAIL" starttime="20200929 18:28:31.868" endtime="20200929 18:30:53.856"></status>
+</suite>
+<status status="FAIL" starttime="20200929 18:28:31.851" endtime="20200929 18:30:53.860"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0">Critical Tests</stat>
-<stat pass="4" fail="0">All Tests</stat>
+<stat pass="11" fail="2">Critical Tests</stat>
+<stat pass="11" fail="2">All Tests</stat>
 </total>
 <tag>
-<stat pass="2" fail="0">regression</stat>
-<stat pass="3" fail="0">sanity</stat>
 </tag>
 <suite>
-<stat pass="4" fail="0" id="s1" name="TaggingTest">TaggingTest</stat>
+<stat pass="11" fail="2" id="s1" name="RobotAutomationSDET">RobotAutomationSDET</stat>
+<stat pass="11" fail="2" id="s1-s1" name="TestCases">RobotAutomationSDET.TestCases</stat>
+<stat pass="11" fail="2" id="s1-s1-s1" name="AdvancedWebElements">RobotAutomationSDET.TestCases.AdvancedWebElements</stat>
 </suite>
 </statistics>
 <errors>

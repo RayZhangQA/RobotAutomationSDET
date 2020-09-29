@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec format="ROBOT" generated="2020-05-09T16:23:59Z" lineno="3289" name="BuiltIn" namedargs="true" scope="GLOBAL" source="C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\libraries\BuiltIn.py" specversion="2" type="LIBRARY">
-<version>3.2.1</version>
+<keywordspec format="ROBOT" generated="2020-09-29T20:25:11Z" lineno="3296" name="BuiltIn" namedargs="true" scope="GLOBAL" source="C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\libraries\BuiltIn.py" specversion="2" type="LIBRARY">
+<version>3.2.2</version>
 <scope>global</scope>
 <namedargs>yes</namedargs>
 <doc>An always available standard library with often needed keywords.
@@ -270,7 +270,7 @@ but with the following differences:
   strings get the ``u`` prefix and no ``b`` prefix is added to byte
   strings.
 - Containers are not pretty-printed.</doc>
-<kw lineno="3035" name="Call Method">
+<kw lineno="3042" name="Call Method">
 <arguments>
 <arg>object</arg>
 <arg>method_name</arg>
@@ -296,7 +296,7 @@ Examples:
 | Call Method      | ${object}    | kwargs    | name=value | foo=bar |
 | Call Method      | ${object}    | positional   | escaped\=equals  |</doc>
 </kw>
-<kw lineno="2567" name="Catenate">
+<kw lineno="2574" name="Catenate">
 <arguments>
 <arg>*items</arg>
 </arguments>
@@ -315,7 +315,7 @@ Examples:
 | ${str2} = 'Hello---world'
 | ${str3} = 'Helloworld'</doc>
 </kw>
-<kw lineno="2716" name="Comment">
+<kw lineno="2723" name="Comment">
 <arguments>
 <arg>*messages</arg>
 </arguments>
@@ -337,14 +337,15 @@ continues from the next one. Can be used directly in a for loop or
 in a keyword that the loop uses.
 
 Example:
-| :FOR | ${var}         | IN                     | @{VALUES}         |
-|      | Run Keyword If | '${var}' == 'CONTINUE' | Continue For Loop |
-|      | Do Something   | ${var}                 |
+| FOR | ${var}         | IN                     | @{VALUES}         |
+|     | Run Keyword If | '${var}' == 'CONTINUE' | Continue For Loop |
+|     | Do Something   | ${var}                 |
+| END |
 
 See `Continue For Loop If` to conditionally continue a for loop without
 using `Run Keyword If` or other wrapper keywords.</doc>
 </kw>
-<kw lineno="2288" name="Continue For Loop If">
+<kw lineno="2289" name="Continue For Loop If">
 <arguments>
 <arg>condition</arg>
 </arguments>
@@ -355,9 +356,10 @@ the given condition. The condition is evaluated using the same
 semantics as with `Should Be True` keyword.
 
 Example:
-| :FOR | ${var}               | IN                     | @{VALUES} |
-|      | Continue For Loop If | '${var}' == 'CONTINUE' |
-|      | Do Something         | ${var}                 |</doc>
+| FOR | ${var}               | IN                     | @{VALUES} |
+|     | Continue For Loop If | '${var}' == 'CONTINUE' |
+|     | Do Something         | ${var}                 |
+| END |</doc>
 </kw>
 <kw lineno="168" name="Convert To Binary">
 <arguments>
@@ -627,7 +629,7 @@ Examples:
 | ${scalar} = | Create List | a    | b    | c    |
 | ${ints} =   | Create List | ${1} | ${2} | ${3} |</doc>
 </kw>
-<kw lineno="2986" name="Evaluate">
+<kw lineno="2993" name="Evaluate">
 <arguments>
 <arg>expression</arg>
 <arg>modules=None</arg>
@@ -675,7 +677,7 @@ was not enough to make the root module itself available in the
 evaluation namespace. It needed to be taken into use explicitly like
 ``modules=rootmod, rootmod.submod``.</doc>
 </kw>
-<kw lineno="2303" name="Exit For Loop">
+<kw lineno="2305" name="Exit For Loop">
 <arguments>
 </arguments>
 <doc>Stops executing the enclosing for loop.
@@ -684,14 +686,15 @@ Exits the enclosing for loop and continues execution after it.
 Can be used directly in a for loop or in a keyword that the loop uses.
 
 Example:
-| :FOR | ${var}         | IN                 | @{VALUES}     |
-|      | Run Keyword If | '${var}' == 'EXIT' | Exit For Loop |
-|      | Do Something   | ${var} |
+| FOR | ${var}         | IN                 | @{VALUES}     |
+|     | Run Keyword If | '${var}' == 'EXIT' | Exit For Loop |
+|     | Do Something   | ${var} |
+| END |
 
 See `Exit For Loop If` to conditionally exit a for loop without
 using `Run Keyword If` or other wrapper keywords.</doc>
 </kw>
-<kw lineno="2320" name="Exit For Loop If">
+<kw lineno="2323" name="Exit For Loop If">
 <arguments>
 <arg>condition</arg>
 </arguments>
@@ -702,9 +705,10 @@ the given condition. The condition is evaluated using the same
 semantics as with `Should Be True` keyword.
 
 Example:
-| :FOR | ${var}           | IN                 | @{VALUES} |
-|      | Exit For Loop If | '${var}' == 'EXIT' |
-|      | Do Something     | ${var}             |</doc>
+| FOR | ${var}           | IN                 | @{VALUES} |
+|     | Exit For Loop If | '${var}' == 'EXIT' |
+|     | Do Something     | ${var}             |
+| END |</doc>
 </kw>
 <kw lineno="509" name="Fail">
 <arguments>
@@ -783,7 +787,7 @@ Examples:
 See also `Length Should Be`, `Should Be Empty` and `Should Not Be
 Empty`.</doc>
 </kw>
-<kw lineno="3254" name="Get Library Instance">
+<kw lineno="3261" name="Get Library Instance">
 <arguments>
 <arg>name=None</arg>
 <arg>all=False</arg>
@@ -814,7 +818,7 @@ dictionary mapping all library names to instances will be returned.
 Example:
 | &amp;{all libs} = | Get library instance | all=True |</doc>
 </kw>
-<kw lineno="2903" name="Get Time">
+<kw lineno="2910" name="Get Time">
 <arguments>
 <arg>format=timestamp</arg>
 <arg>time_=NOW</arg>
@@ -950,7 +954,7 @@ Example:
 | ${no decoration} =            | Get Variables | no_decoration=Yes |
 | Dictionary Should Contain Key | ${no decoration} | example_variable |</doc>
 </kw>
-<kw lineno="2760" name="Import Library">
+<kw lineno="2767" name="Import Library">
 <arguments>
 <arg>name</arg>
 <arg>*args</arg>
@@ -979,7 +983,7 @@ Examples:
 | Import Library | ${CURDIR}/../Library.py | arg1 | named=arg2 |
 | Import Library | ${LIBRARIES}/Lib.java | arg | WITH NAME | JavaLib |</doc>
 </kw>
-<kw lineno="2822" name="Import Resource">
+<kw lineno="2829" name="Import Resource">
 <arguments>
 <arg>path</arg>
 </arguments>
@@ -999,7 +1003,7 @@ Examples:
 | Import Resource | ${CURDIR}/../resources/resource.html |
 | Import Resource | found_from_pythonpath.robot |</doc>
 </kw>
-<kw lineno="2797" name="Import Variables">
+<kw lineno="2804" name="Import Variables">
 <arguments>
 <arg>path</arg>
 <arg>*args</arg>
@@ -1022,7 +1026,7 @@ Examples:
 | Import Variables | ${CURDIR}/../vars/env.py | arg1 | arg2 |
 | Import Variables | file_from_pythonpath.py  |      |      |</doc>
 </kw>
-<kw lineno="2885" name="Keyword Should Exist">
+<kw lineno="2892" name="Keyword Should Exist">
 <arguments>
 <arg>name</arg>
 <arg>msg=None</arg>
@@ -1048,7 +1052,7 @@ See also `Variable Should Exist`.</doc>
 The length of the item is got using the `Get Length` keyword. The
 default error message can be overridden with the ``msg`` argument.</doc>
 </kw>
-<kw lineno="2593" name="Log">
+<kw lineno="2600" name="Log">
 <arguments>
 <arg>message</arg>
 <arg>level=INFO</arg>
@@ -1107,7 +1111,7 @@ Examples:
 See `Log Many` if you want to log multiple messages in one go, and
 `Log To Console` if you only want to write to the console.</doc>
 </kw>
-<kw lineno="2665" name="Log Many">
+<kw lineno="2672" name="Log Many">
 <arguments>
 <arg>*messages</arg>
 </arguments>
@@ -1122,7 +1126,7 @@ Examples:
 See `Log` and `Log To Console` keywords if you want to use alternative
 log levels, use HTML, or log to the console.</doc>
 </kw>
-<kw lineno="2693" name="Log To Console">
+<kw lineno="2700" name="Log To Console">
 <arguments>
 <arg>message</arg>
 <arg>stream=STDOUT</arg>
@@ -1153,12 +1157,12 @@ This keyword does not log the message to the normal log file. Use
 </arguments>
 <doc>Logs all variables in the current scope with given log level.</doc>
 </kw>
-<kw lineno="2529" name="No Operation">
+<kw lineno="2536" name="No Operation">
 <arguments>
 </arguments>
 <doc>Does absolutely nothing.</doc>
 </kw>
-<kw lineno="2456" name="Pass Execution">
+<kw lineno="2462" name="Pass Execution">
 <arguments>
 <arg>message</arg>
 <arg>*tags</arg>
@@ -1205,7 +1209,7 @@ parts that could actually uncover problems in the tested application.
 In cases where execution cannot continue do to external factors,
 it is often safer to fail the test case and make it non-critical.</doc>
 </kw>
-<kw lineno="2508" name="Pass Execution If">
+<kw lineno="2514" name="Pass Execution If">
 <arguments>
 <arg>condition</arg>
 <arg>message</arg>
@@ -1219,11 +1223,12 @@ evaluated similarly as with `Should Be True` keyword, and ``message``
 and ``*tags`` have same semantics as with `Pass Execution`.
 
 Example:
-| :FOR | ${var}            | IN                     | @{VALUES}               |
-|      | Pass Execution If | '${var}' == 'EXPECTED' | Correct value was found |
-|      | Do Something      | ${var}                 |</doc>
+| FOR | ${var}            | IN                     | @{VALUES}               |
+|     | Pass Execution If | '${var}' == 'EXPECTED' | Correct value was found |
+|     | Do Something      | ${var}                 |
+| END |</doc>
 </kw>
-<kw lineno="3066" name="Regexp Escape">
+<kw lineno="3073" name="Regexp Escape">
 <arguments>
 <arg>*patterns</arg>
 </arguments>
@@ -1238,7 +1243,7 @@ Examples:
 | ${escaped} = | Regexp Escape | ${original} |
 | @{strings} = | Regexp Escape | @{strings}  |</doc>
 </kw>
-<kw lineno="2745" name="Reload Library">
+<kw lineno="2752" name="Reload Library">
 <arguments>
 <arg>name_or_instance</arg>
 </arguments>
@@ -1251,7 +1256,7 @@ The library can be specified by its name or as the active instance of
 the library. The latter is especially useful if the library itself
 calls this keyword as a method.</doc>
 </kw>
-<kw lineno="3226" name="Remove Tags">
+<kw lineno="3233" name="Remove Tags">
 <arguments>
 <arg>*tags</arg>
 </arguments>
@@ -1325,7 +1330,7 @@ The file ``template.txt`` contains ``Hello ${NAME}!`` and variable
 | ${message} =    | Replace Variables | ${template}            |
 | Should Be Equal | ${message}        | Hello Robot!           |</doc>
 </kw>
-<kw lineno="2336" name="Return From Keyword">
+<kw lineno="2340" name="Return From Keyword">
 <arguments>
 <arg>*return_values</arg>
 </arguments>
@@ -1363,16 +1368,17 @@ logic into a test library.
 | Find Index
 |    [Arguments]    ${element}    @{items}
 |    ${index} =    Set Variable    ${0}
-|    :FOR    ${item}    IN    @{items}
-|    \    Run Keyword If    '${item}' == '${element}'    Return From Keyword    ${index}
-|    \    ${index} =    Set Variable    ${index + 1}
+|    FOR    ${item}    IN    @{items}
+|        Run Keyword If    '${item}' == '${element}'    Return From Keyword    ${index}
+|        ${index} =    Set Variable    ${index + 1}
+|    END
 |    Return From Keyword    ${-1}    # Also [Return] would work here.
 
 The most common use case, returning based on an expression, can be
 accomplished directly with `Return From Keyword If`. See also
 `Run Keyword And Return` and `Run Keyword And Return If`.</doc>
 </kw>
-<kw lineno="2387" name="Return From Keyword If">
+<kw lineno="2392" name="Return From Keyword If">
 <arguments>
 <arg>condition</arg>
 <arg>*return_values</arg>
@@ -1390,9 +1396,10 @@ Given the same example as in `Return From Keyword`, we can rewrite the
 | Find Index
 |    [Arguments]    ${element}    @{items}
 |    ${index} =    Set Variable    ${0}
-|    :FOR    ${item}    IN    @{items}
-|    \    Return From Keyword If    '${item}' == '${element}'    ${index}
-|    \    ${index} =    Set Variable    ${index + 1}
+|    FOR    ${item}    IN    @{items}
+|        Return From Keyword If    '${item}' == '${element}'    ${index}
+|        ${index} =    Set Variable    ${index + 1}
+|    END
 |    Return From Keyword    ${-1}    # Also [Return] would work here.
 
 See also `Run Keyword And Return` and `Run Keyword And Return If`.</doc>
@@ -1488,7 +1495,7 @@ The keyword name and arguments work as in `Run Keyword`. See
 Errors caused by invalid syntax, timeouts, or fatal exceptions are not
 caught by this keyword. Otherwise this keyword itself never fails.</doc>
 </kw>
-<kw lineno="2412" name="Run Keyword And Return">
+<kw lineno="2418" name="Run Keyword And Return">
 <arguments>
 <arg>name</arg>
 <arg>*args</arg>
@@ -1510,7 +1517,7 @@ Example:
 Use `Run Keyword And Return If` if you want to run keyword and return
 based on a condition.</doc>
 </kw>
-<kw lineno="2438" name="Run Keyword And Return If">
+<kw lineno="2444" name="Run Keyword And Return If">
 <arguments>
 <arg>condition</arg>
 <arg>name</arg>
@@ -1783,7 +1790,7 @@ used with care.
 
 See `Set Suite Variable` for more information and examples.</doc>
 </kw>
-<kw lineno="2844" name="Set Library Search Order">
+<kw lineno="2851" name="Set Library Search Order">
 <arguments>
 <arg>*search_order</arg>
 </arguments>
@@ -1857,7 +1864,7 @@ that want to set local variables.
 
 New in Robot Framework 3.2.</doc>
 </kw>
-<kw lineno="2727" name="Set Log Level">
+<kw lineno="2734" name="Set Log Level">
 <arguments>
 <arg>level</arg>
 </arguments>
@@ -1870,7 +1877,7 @@ INFO, but it can be overridden with the command line option
 The available levels: TRACE, DEBUG, INFO (default), WARN, ERROR and NONE (no
 logging).</doc>
 </kw>
-<kw lineno="3156" name="Set Suite Documentation">
+<kw lineno="3163" name="Set Suite Documentation">
 <arguments>
 <arg>doc</arg>
 <arg>append=False</arg>
@@ -1890,7 +1897,7 @@ instead.
 The documentation of the current suite is available as a built-in
 variable ``${SUITE DOCUMENTATION}``.</doc>
 </kw>
-<kw lineno="3177" name="Set Suite Metadata">
+<kw lineno="3184" name="Set Suite Metadata">
 <arguments>
 <arg>name</arg>
 <arg>value</arg>
@@ -1967,7 +1974,7 @@ This limitation applies also to `Set Test Variable`, `Set Global
 Variable`, `Variable Should Exist`, `Variable Should Not Exist` and
 `Get Variable Value` keywords.</doc>
 </kw>
-<kw lineno="3201" name="Set Tags">
+<kw lineno="3208" name="Set Tags">
 <arguments>
 <arg>*tags</arg>
 </arguments>
@@ -1995,7 +2002,7 @@ you want to fail the test case after setting and/or removing tags.</doc>
 This is an alias for `Set Test Variable` that is more applicable when
 creating tasks, not tests. New in RF 3.1.</doc>
 </kw>
-<kw lineno="3137" name="Set Test Documentation">
+<kw lineno="3144" name="Set Test Documentation">
 <arguments>
 <arg>doc</arg>
 <arg>append=False</arg>
@@ -2010,7 +2017,7 @@ The current test documentation is available as a built-in variable
 ``${TEST DOCUMENTATION}``. This keyword can not be used in suite
 setup or suite teardown.</doc>
 </kw>
-<kw lineno="3084" name="Set Test Message">
+<kw lineno="3091" name="Set Test Message">
 <arguments>
 <arg>message</arg>
 <arg>append=False</arg>
@@ -2660,7 +2667,7 @@ See `Should Be Equal` for an explanation on how to override the default
 error message with ``msg`` and ``values``, as well as for semantics
 of the ``ignore_case`` option.</doc>
 </kw>
-<kw lineno="2532" name="Sleep">
+<kw lineno="2539" name="Sleep">
 <arguments>
 <arg>time_</arg>
 <arg>reason=None</arg>

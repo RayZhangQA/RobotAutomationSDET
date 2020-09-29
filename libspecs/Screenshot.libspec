@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec format="ROBOT" generated="2020-05-09T16:23:58Z" lineno="52" name="Screenshot" namedargs="true" scope="SUITE" source="C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\libraries\Screenshot.py" specversion="2" type="LIBRARY">
-<version>3.2.1</version>
+<keywordspec format="ROBOT" generated="2020-09-29T20:25:11Z" lineno="52" name="Screenshot" namedargs="true" scope="SUITE" source="C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\libraries\Screenshot.py" specversion="2" type="LIBRARY">
+<version>3.2.2</version>
 <scope>test suite</scope>
 <namedargs>yes</namedargs>
 <doc>Test library for taking screenshots on the machine where tests are run.

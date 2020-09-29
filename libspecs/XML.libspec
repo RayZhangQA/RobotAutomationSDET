@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec format="ROBOT" generated="2020-05-09T16:23:58Z" lineno="36" name="XML" namedargs="true" scope="GLOBAL" source="C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\libraries\XML.py" specversion="2" type="LIBRARY">
-<version>3.2.1</version>
+<keywordspec format="ROBOT" generated="2020-09-29T20:25:10Z" lineno="36" name="XML" namedargs="true" scope="GLOBAL" source="C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\libraries\XML.py" specversion="2" type="LIBRARY">
+<version>3.2.2</version>
 <scope>global</scope>
 <namedargs>yes</namedargs>
 <doc>Robot Framework test library for verifying and modifying XML documents.
@@ -471,7 +471,7 @@ Examples using ``${XML}`` structure from `Example`:
 
 Use `Remove Element` or `Remove Elements` to remove elements.</doc>
 </kw>
-<kw lineno="1221" name="Clear Element">
+<kw lineno="1222" name="Clear Element">
 <arguments>
 <arg>source</arg>
 <arg>xpath=.</arg>
@@ -501,7 +501,7 @@ Examples using ``${XML}`` structure from `Example`:
 
 Use `Remove Element` to remove the whole element.</doc>
 </kw>
-<kw lineno="1254" name="Copy Element">
+<kw lineno="1255" name="Copy Element">
 <arguments>
 <arg>source</arg>
 <arg>xpath=.</arg>
@@ -682,7 +682,7 @@ Examples using ``${XML}`` structure from `Example`:
 | ${paragraph} =            | Get Element  | ${XML} | xpath=html/p |
 | Element Text Should Match | ${paragraph} | Text with * and *. | normalize_whitespace=yes |</doc>
 </kw>
-<kw lineno="1275" name="Element To String">
+<kw lineno="1276" name="Element To String">
 <arguments>
 <arg>source</arg>
 <arg>xpath=.</arg>
@@ -765,7 +765,7 @@ Examples using ``${XML}`` structure from `Example`:
 
 See `Elements Should Be Equal` for more examples.</doc>
 </kw>
-<kw lineno="1348" name="Evaluate Xpath">
+<kw lineno="1349" name="Evaluate Xpath">
 <arguments>
 <arg>source</arg>
 <arg>expression</arg>
@@ -981,7 +981,7 @@ Examples using ``${XML}`` structure from `Example`:
 | Should Be Equal  | @{texts}[0]        | more text |             |
 | Should Be Equal  | @{texts}[1]        | ${EMPTY}  |             |</doc>
 </kw>
-<kw lineno="1295" name="Log Element">
+<kw lineno="1296" name="Log Element">
 <arguments>
 <arg>source</arg>
 <arg>level=INFO</arg>
@@ -1150,7 +1150,7 @@ elements matching the given ``xpath``.</doc>
 Like `Remove Element Attributes` but removes all attributes of all
 elements matching the given ``xpath``.</doc>
 </kw>
-<kw lineno="1308" name="Save Xml">
+<kw lineno="1309" name="Save Xml">
 <arguments>
 <arg>source</arg>
 <arg>path</arg>

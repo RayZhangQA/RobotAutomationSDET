@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec format="ROBOT" generated="2020-05-09T16:23:59Z" lineno="830" name="Collections" namedargs="true" scope="GLOBAL" source="C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\libraries\Collections.py" specversion="2" type="LIBRARY">
-<version>3.2.1</version>
+<keywordspec format="ROBOT" generated="2020-09-29T20:25:11Z" lineno="830" name="Collections" namedargs="true" scope="GLOBAL" source="C:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\robot\libraries\Collections.py" specversion="2" type="LIBRARY">
+<version>3.2.2</version>
 <scope>global</scope>
 <namedargs>yes</namedargs>
 <doc>A test library providing keywords for handling lists and dictionaries.
